@@ -111,3 +111,12 @@ class Historial_TurnoSerializer(serializers.ModelSerializer):
         model = Historial_Turno
         fields = '__all__'
         depth = 4
+
+
+class Usuario_Lat_Lng_Serializer(serializers.Serializer):
+
+    lat = serializers.CharField(max_length=40, allow_blank=False)
+    lng = serializers.CharField(max_length=40, allow_blank=False)
+
+    class Meta:
+        fields = ('Lat', 'lng')
